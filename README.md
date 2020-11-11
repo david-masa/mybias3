@@ -1,24 +1,12 @@
-# README
+## Postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|title|string|null: false|
+|reason|text|null: false|
+|category_id|reference|null: false, foreign_key: true|
+|youtube_url|string|null: false|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+belongs_to :user</br>
+belongs_to :category</br>
