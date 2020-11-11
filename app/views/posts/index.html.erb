@@ -1,0 +1,11 @@
+<div class="contents row">
+  <% @posts.each do |post| %>
+    <div class="content_post">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= post.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p><%= post.title %></p>
+          <span class="reason">
+            <%= post.reason %>
+          </span>
+    </div>
+  <% end %>
+</div>
