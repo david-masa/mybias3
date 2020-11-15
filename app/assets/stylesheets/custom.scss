@@ -1,0 +1,17 @@
+/* ヘッダー */
+
+a{
+  text-decoration: none;
+}
+
+#logo {
+  float: left;
+  background-image: url(logo-mybias.png);
+  background-size: cover;
+  height: 60px;
+  width: 200px;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+}
