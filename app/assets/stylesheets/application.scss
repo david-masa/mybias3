@@ -1,5 +1,14 @@
-@import "custom";
-// Custom bootstrap variables must be set or imported *before* bootstrap.
+//bootstrap設定
 @import "bootstrap";
+//fontawesome設定
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+//ブレイクポイント設定
+@mixin sm { @media (min-width: 576px) { @content; } }
+@mixin md { @media (min-width: 768px) { @content; } }
+@mixin lg { @media (min-width: 992px) { @content; } }
+
+
+
+@import "header";
