@@ -1,15 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mybias3</title>
+    <title>MyBias</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Unica+One::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <%= link_to "", root_path, id: "logo" %>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <%= link_to icon('fas', 'th') + " カテゴリー", '#', class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } %>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "J-POP", "#", class: 'dropdown-item' %>
+              <%= link_to "K-POP", "#", class: 'dropdown-item' %>
+              <%= link_to "Thai-POP", "#", class: 'dropdown-item' %>
+              <%= link_to "Chinese-POP", "#", class: 'dropdown-item' %>
+              <%= link_to "Indian-POP", "#", class: 'dropdown-item' %>
+            </div>
+          </li>
+          <li class="nav-item">
+            <%= link_to icon('fas', 'th') + " 投稿一覧", root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to icon('fas', 'users') + " ユーザー一覧", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to icon('fas', 'edit') + " 投稿する",  "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item dropdown">
+            <%= link_to icon('fas', 'user') + " XXXさん", '#', class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } %>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to icon('fas', 'user-alt') + "マイページ", "#", class: 'dropdown-item' %>
+              <%= link_to icon('fas', 'user-edit') + "設定", "#", class: 'dropdown-item' %>
+              <div class="dropdown-divider"></div>
+              <%= link_to icon('fas', 'sign-out-alt') + "ログアウト", "#", class: 'dropdown-item' %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
+
+    <footer>
+      <p>
+        Copyright MyBias 2020.
+      </p>
+    </footer>
   </body>
 </html>
