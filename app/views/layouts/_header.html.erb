@@ -7,35 +7,46 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <%= link_to icon('fas', 'th') + " カテゴリー", '#', class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } %>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "K-POP", "#", class: 'dropdown-item' %>
-              <%= link_to "J-POP", "#", class: 'dropdown-item' %>
-              <%= link_to "Thai-POP", "#", class: 'dropdown-item' %>
-              <%= link_to "Chinese-POP", "#", class: 'dropdown-item' %>
-              <%= link_to "Russian-POP", "#", class: 'dropdown-item' %>
-              <%= link_to "Indian-POP", "#", class: 'dropdown-item' %>
-            </div>
-          </li>
-          <li class="nav-item">
-            <%= link_to icon('fab', 'youtube') + " 投稿一覧", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to icon('fas', 'users') + " ユーザー一覧", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to icon('fas', 'edit') + " 投稿する",  new_post_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item dropdown">
-            <%= link_to icon('fas', 'user') + " XXXさん", '#', class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } %>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to icon('fas', 'user-alt') + "マイページ", "#", class: 'dropdown-item' %>
-              <%= link_to icon('fas', 'user-edit') + "設定", "#", class: 'dropdown-item' %>
-              <div class="dropdown-divider"></div>
-              <%= link_to icon('fas', 'sign-out-alt') + "ログアウト", "#", class: 'dropdown-item' %>
-            </div>
-          </li>
+          <% if user_signed_in? %>
+            <li class="nav-item dropdown">
+              <%= link_to icon('fas', 'th') + " カテゴリー", '#', class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } %>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <%= link_to "K-POP", "#", class: 'dropdown-item' %>
+                <%= link_to "J-POP", "#", class: 'dropdown-item' %>
+                <%= link_to "Thai-POP", "#", class: 'dropdown-item' %>
+                <%= link_to "Chinese-POP", "#", class: 'dropdown-item' %>
+                <%= link_to "Russian-POP", "#", class: 'dropdown-item' %>
+                <%= link_to "Indian-POP", "#", class: 'dropdown-item' %>
+              </div>
+            </li>
+            <li class="nav-item">
+              <%= link_to icon('fab', 'youtube') + " 投稿一覧", root_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to icon('fas', 'users') + " ユーザー一覧", "#", class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to icon('fas', 'edit') + " 投稿する",  new_post_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item dropdown">
+              <%= link_to icon('fas', 'user') + " XXXさん", '#', class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } %>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <%= link_to icon('fas', 'user-alt') + "マイページ", "#", class: 'dropdown-item' %>
+                <%= link_to icon('fas', 'user-edit') + "設定", edit_user_registration_path, class: 'dropdown-item' %>
+                <div class="dropdown-divider"></div>
+                <%= link_to icon('fas', 'sign-out-alt') + "ログアウト", destroy_user_session_path, class: 'dropdown-item' %>
+              </div>
+            </li>
+          <% else %>
+            <li class="nav-item"><%= link_to icon('fab', 'youtube') + "About", "#", class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to icon('fas', 'sign-in-alt') + " ログイン", user_session_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to icon('fas', 'users') + " 新規登録", new_user_registration_path, class: "nav-link" %>
+            </li>
+          <% end %>
         </ul>
       </div>
     </nav>
