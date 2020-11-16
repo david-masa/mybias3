@@ -1,0 +1,16 @@
+footer {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  color: white;
+  text-align: center;
+  background-color: #212529;
+}
+
+.footer-item {
+  font-size: 0.8em;
+  line-height: 1.7em;
+  @include md {
+    font-size: 1.1em;
+    line-height: 1.7em;
+  }
+}

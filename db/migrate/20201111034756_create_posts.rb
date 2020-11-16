@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.references :user
       t.string :title, null: false
       t.text :reason, null: false
-      t.integer :category_id
+      t.integer :category_id, default: 0
       t.string :youtube_url, null: false
       t.timestamps
     end
