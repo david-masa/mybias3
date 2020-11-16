@@ -29,7 +29,7 @@
               <%= link_to icon('fas', 'edit') + " 投稿する",  new_post_path, class: "nav-link" %>
             </li>
             <li class="nav-item dropdown">
-              <%= link_to icon('fas', 'user') + " XXXさん", '#', class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } %>
+              <%= link_to icon('fas', 'user') + " #{current_user.name}さん", '#', class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } %>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <%= link_to icon('fas', 'user-alt') + "マイページ", "#", class: 'dropdown-item' %>
                 <%= link_to icon('fas', 'user-edit') + "設定", edit_user_registration_path, class: 'dropdown-item' %>
