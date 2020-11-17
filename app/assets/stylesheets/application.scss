@@ -9,6 +9,24 @@
 @mixin md { @media (min-width: 768px) { @content; } }
 @mixin lg { @media (min-width: 992px) { @content; } }
 
+// ログイン画面
+
+.container-login {
+  @extend .container-fluid;
+  max-width: 576px;
+  padding: 2rem;
+}
+
+// 「ログインしました」などのフラッシュ用スタイル
+
+.alert-notice {
+  @extend .alert-info;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
+
 // 共通設定
 .main-title {
   text-align: center;
@@ -23,3 +41,5 @@
 @import "header";
 @import "footer";
 @import "posts";
+@import "top";
+@import "users";

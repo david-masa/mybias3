@@ -1,0 +1,20 @@
+.center {
+  background-image:url('top1.jpg');
+  background-size: cover;
+  background-position: 50% 25%;
+  min-height: calc(100vh - 140px);
+  width: 100%;
+  padding-top: 0.5rem;
+  position: relative;
+}
+
+.copy {
+  color: black;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.0rem;
+
+  @include md {
+    font-size: 1.2em;
+  }
+}

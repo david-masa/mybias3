@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    @post = current_user.posts.build(post_params)
     url = params[:post][:youtube_url]
     url = url.last(11)
     @post.youtube_url = url
