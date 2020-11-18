@@ -4,6 +4,13 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+@font-face {
+  font-family: 'バナナスリップplus';
+  src: url('bananaslipplus.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 //ブレイクポイント設定
 @mixin sm { @media (min-width: 576px) { @content; } }
 @mixin md { @media (min-width: 768px) { @content; } }
@@ -37,6 +44,9 @@
   }
 }
 
+.page{
+  background-color: #f5f5f5;
+}
 
 @import "header";
 @import "footer";

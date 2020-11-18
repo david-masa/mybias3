@@ -1,16 +1,32 @@
 <%= render 'shared/flash_messages' %>
 
-<div class="contents row">
+<div class="contents-bias">
   <% @posts.each do |post| %>
-    <div class="content_post">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= post.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        
-        <p><%= post.user.name %></p>
-        <p><%= post.title %></p>
-          <span class="reason">
-            <%= post.reason %>
-          </span>
+    <div class="single-content">
 
+      <div class="contents-video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= post.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="contents-data">
+        <div class="contents-title">
+          <%= link_to "誰？？", "/posts/#{post.id}", method: :get %>
+        </div>
+        <div class="contents-v-box">
+          <div class="contents-image">
+            <img src="<%= post.user.image %>" alt="face" width="50" height="50">
+          </div>
+          <div class="contents-name">
+            <%= post.user.name %>
+          </div>
+          <div class="contents-time">
+            <%= post.created_at %>
+          </div>
+        </div>
+        <div class="contents-reason">
+          推した理由は？？<br><br>
+          <%= post.reason %>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>

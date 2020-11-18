@@ -1,3 +1,59 @@
+.contents-bias{
+display: flex;
+flex-direction: column;
+padding: 50px;
+font-family: 'バナナスリップplus';
+
+  .single-content{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+
+    .contents-video{
+
+    }
+
+    .contents-data{
+      margin: 20px;
+    border: solid 1px blanchedalmond;
+      .contents-title{
+        font-weight: bold;
+      }
+
+      .contents-v-box{
+        display: flex;
+        justify-content: flex-start;
+        vertical-align: middle;
+        img{
+          border-radius: 50%;
+        }
+
+        .contents-name{
+          margin-right: 10px;
+
+        }
+
+        .contents-time{
+
+        }
+      }
+
+      .contents-reason{
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 .post-title {
   margin-bottom: 2rem;
 }
@@ -32,32 +88,5 @@
   }
   @include lg {
     margin-right: 3rem;
-  }
-}
-
-.category-label {
-  padding-right: 1rem;
-}
-
-.age-type {
-  padding-top: 0.5rem;
-  padding-left: 1rem;
-  background-color: white;
-  border: 1px solid #bbb;
-  display: block;
-  @include sm {
-    display: inline;
-    margin-bottom: 1rem;
-  }
-}
-
-.category {
-  padding-top: 0.5rem;
-  padding-left: 1rem;
-  background-color: white;
-  border: 1px solid #bbb;
-  display: block;
-  @include sm {
-    display: inline;
   }
 }
