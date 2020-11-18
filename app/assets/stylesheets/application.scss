@@ -16,6 +16,10 @@
 @mixin md { @media (min-width: 768px) { @content; } }
 @mixin lg { @media (min-width: 992px) { @content; } }
 
+body{
+  padding-top: 60px;
+}
+
 // ログイン画面
 
 .container-login {
@@ -33,6 +37,8 @@
 .alert-alert {
   @extend .alert-danger;
 }
+
+
 
 // 共通設定
 .main-title {
