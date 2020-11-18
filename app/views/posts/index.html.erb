@@ -9,7 +9,8 @@
       </div>
       <div class="contents-data">
         <div class="contents-title">
-          <%= link_to "誰？？", "/posts/#{post.id}", method: :get %>
+          <%= link_to "誰ですか？？", "/posts/#{post.id}", method: :get %>
+          <br><%= post.title %>
         </div>
         <div class="contents-v-box">
           <div class="contents-image">
@@ -19,7 +20,7 @@
             <%= post.user.name %>
           </div>
           <div class="contents-time">
-            <%= post.created_at %>
+            <%= post.created_at.strftime('%Y/%m/%d %H:%M') %>
           </div>
         </div>
         <div class="contents-reason">
