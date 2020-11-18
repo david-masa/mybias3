@@ -1,3 +1,64 @@
+.contents-bias{
+display: flex;
+flex-direction: column;
+padding: 50px;
+
+  .single-content{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+
+    .contents-video{
+      width: 50vw;
+      height: 50vh;
+    }
+
+    .contents-data{
+      margin: 10px 20px;
+      border: solid 1px blanchedalmond;
+      width: 50vw;
+      height: 45vh;
+      .contents-title{
+        font-weight: bold;
+        height: 8vh;
+      }
+
+      .contents-v-box{
+        display: flex;
+        justify-content: flex-start;
+        vertical-align: middle;
+        
+        img{
+          border-radius: 50%;
+        }
+
+        .contents-name{
+          margin-right: 10px;
+          width: 10vw;
+        }
+
+        .contents-time{
+          width: 30vw;
+        }
+      }
+
+      .contents-reason{
+        height: 35vh;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 .post-title {
   margin-bottom: 2rem;
 }
@@ -32,32 +93,5 @@
   }
   @include lg {
     margin-right: 3rem;
-  }
-}
-
-.category-label {
-  padding-right: 1rem;
-}
-
-.age-type {
-  padding-top: 0.5rem;
-  padding-left: 1rem;
-  background-color: white;
-  border: 1px solid #bbb;
-  display: block;
-  @include sm {
-    display: inline;
-    margin-bottom: 1rem;
-  }
-}
-
-.category {
-  padding-top: 0.5rem;
-  padding-left: 1rem;
-  background-color: white;
-  border: 1px solid #bbb;
-  display: block;
-  @include sm {
-    display: inline;
   }
 }
