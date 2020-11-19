@@ -6,8 +6,21 @@
     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/<%= @post.youtube_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <div class="contents-data">
+    <div class="more">
+    <span><%= icon('fas', 'edit') %></span>
+      <ul class="more_list">
+
+        <li>
+          <%= link_to "編集", "#", method: :get %>
+        </li>
+        <li>
+          <%= link_to "削除", "#", method: :delete %>
+        </li>
+      </ul>
+    </div>
+
     <div class="contents-title">
-      <%= link_to "誰ですか？？", "/posts/#{@post.id}", method: :get %>
+      誰ですか？？
       <br><%= @post.title %>
     </div>
     <div class="contents-v-box">
