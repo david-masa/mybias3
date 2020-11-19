@@ -27,4 +27,21 @@
     </div>
   </div>
 </div>
+<div class="comment-container">
+  <%= form_with(model: [@post, @comment], local: true) do |form| %>
+    <%= form.text_area :text, placeholder: "コメントする", size: "50x3" %>
+    <%= form.submit "SEND" %>
+  <% end %>
+</div>
+<div class="comments">
+  <h4>＜コメント一覧＞</h4>
+  <% if @comments %>
+    <% @comments.each do |comment| %>
+      <p>
+        <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+        <%= comment.text %>
+      </p>
+    <% end %>
+  <% end %>
+</div>
 

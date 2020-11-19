@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
+  has_many :comments
 
   validates :user_id, length: { maximum: 255 }
   validates :title, presence: true
