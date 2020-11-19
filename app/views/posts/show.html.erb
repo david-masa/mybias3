@@ -11,10 +11,10 @@
       <ul class="more_list">
 
         <li>
-          <%= link_to "編集", "#", method: :get %>
+          <%= link_to "編集", edit_post_path(@post.id), method: :get %>
         </li>
         <li>
-          <%= link_to "削除", post_path(@post.id), method: :delete %>
+          <%= link_to "削除", post_path(@post.id), method: :delete, data: { confirm:"本当に削除しますか？"} %>
         </li>
       </ul>
     </div>
