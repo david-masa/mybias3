@@ -1,0 +1,2 @@
+class ThaipopController < ApplicationController
+end
