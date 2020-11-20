@@ -1,48 +1,46 @@
-<div class="container">
-  <div class="main-title">
-    <%= icon("fab", "youtube", class: "youtube-icon") %>
-    紹介したいMusicVideoを投稿する
-  </div>
-  <%= form_for(@post) do |f| %>
-    <div class="field row post-title">
-      <%= f.text_area :title, placeholder: "MusicVideoのタイトル" %>
-    </div>
-    <div class="field row">
-      <%= f.text_area :reason, class: "content-form", placeholder: "推した理由" %>
-    </div>
-    <div class="field row post-youtube-url">
-      <%= f.text_area :youtube_url, class: "post-youtube-url", placeholder: "Youtube動画のURL" %>
-    </div>
-    <div class="field row category-row">
-      <span class="category-radio">カテゴリー</span>
-      <div class="radio-inline category-radio">
-        <%= f.radio_button :category_id, :KPOP %>
-        <%= f.label :KPOP, class: "category-label" %>
-      </div>
-      <div class="radio-inlin category-radio">
-        <%= f.radio_button :category_id, :JPOP %>
-        <%= f.label :JPOP, class: "category-label" %>
-      </div>
-      <div class="radio-inline category-radio">
-        <%= f.radio_button :category_id, :ThaiPOP %>
-        <%= f.label :ThaiPOP, class: "category-label" %>
-      </div>
-      <div class="radio-inline category-radio">
-        <%= f.radio_button :category_id, :ChinesePOP %>
-        <%= f.label :ChinesePOP, class: "category-label" %>
-      </div>
-      <div class="radio-inline category-radio">
-        <%= f.radio_button :category_id, :RussianPOP %>
-        <%= f.label :RussianPOP, class: "category-label" %>
-      </div>
-      <div class="radio-inline category-radio">
-        <%= f.radio_button :category_id, :IndianPOP %>
-        <%= f.label :IndianPOP, class: "category-label" %>
-      </div>
-    </div>
-
-    <div class="col-md-2 post-btn">
-      <%= f.submit "投稿する", class: "btn btn-primary btn-block" %>
-    </div>
-  <% end %>
+<div class="main-title">
+  <%= icon("fab", "youtube", class: "youtube-icon") %>
+  紹介したいMusicVideoを投稿する
 </div>
+<%= form_for(@post) do |f| %>
+  <div class="field row post-title">
+    <%= f.text_area :title, placeholder: "誰ですか？？" %>
+  </div>
+  <div class="field row">
+    <%= f.text_area :reason, class: "content-form", placeholder: "推した理由" %>
+  </div>
+  <div class="field row post-youtube-url">
+    <%= f.text_area :youtube_url, class: "post-youtube-url", placeholder: "Youtube動画のURL" %>
+  </div>
+  <div class="field row category-row">
+    <span class="category-radio">カテゴリー</span>
+    <div class="radio-inline category-radio">
+      <%= f.radio_button :category_id, :KPOP %>
+      <%= f.label :KPOP, class: "category-label" %>
+    </div>
+    <div class="radio-inlin category-radio">
+      <%= f.radio_button :category_id, :JPOP %>
+      <%= f.label :JPOP, class: "category-label" %>
+    </div>
+    <div class="radio-inline category-radio">
+      <%= f.radio_button :category_id, :ThaiPOP %>
+      <%= f.label :ThaiPOP, class: "category-label" %>
+    </div>
+    <div class="radio-inline category-radio">
+      <%= f.radio_button :category_id, :ChinesePOP %>
+      <%= f.label :ChinesePOP, class: "category-label" %>
+    </div>
+    <div class="radio-inline category-radio">
+      <%= f.radio_button :category_id, :RussianPOP %>
+      <%= f.label :RussianPOP, class: "category-label" %>
+    </div>
+    <div class="radio-inline category-radio">
+      <%= f.radio_button :category_id, :IndianPOP %>
+      <%= f.label :IndianPOP, class: "category-label" %>
+    </div>
+  </div>
+
+  <div class="col-md-2 post-btn">
+    <%= f.submit "投稿する", class: "btn btn-primary btn-block" %>
+  </div>
+<% end %>
