@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:edit, :update, :destroy]
   resources :kpop, only: :index
+  resources :jpop, only: :index
 end
