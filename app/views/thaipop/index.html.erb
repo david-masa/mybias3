@@ -1,0 +1,55 @@
+<%= render 'shared/flash_messages' %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="top-image" id="thaipop-top">
+    </div>
+  </div>
+</div>
+
+
+<div class="main-title"><span class="flag-icon flag-icon-jp"></span>Thai-POP</div>
+<div class="row">
+  <% @thaipops.each do |post| %>
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="contents-video">
+            <iframe class="contents-video-iframe" src="https://www.youtube.com/embed/<%= post.youtube_url%>" frameborder="0" ></iframe>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="contents-data">
+            <div class="more">
+            <span><%= icon('fas', 'info-circle') %></span>
+              <ul class="more_list">
+                <li>
+                  <%= link_to "詳細", "/posts/#{post.id}, method:get ", method: :get%>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contents-title">
+            誰ですか？？
+            <br><%= post.title %>
+            </div>
+            <div class="contents-v-box">
+              <div class="contents-image">
+                <img src="<%= post.user.image %>" alt="face" width="50" height="50">
+              </div>
+              <div class="contents-name">
+                <%= post.user.name %>
+              </div>
+              <div class="contents-time">
+                <%= post.created_at.strftime('%Y/%m/%d %H:%M') %>
+              </div>
+            </div>
+            <div class="contents-reason">
+              推した理由は？？<br>
+              <%= post.reason %>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  <% end %>
+</div>
