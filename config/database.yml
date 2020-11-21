@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: mybias3_production
-  username: mybias3
-  password: <%= ENV['MYBIAS3_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
