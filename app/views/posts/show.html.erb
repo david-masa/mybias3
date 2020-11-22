@@ -53,13 +53,6 @@
       <% else %>
         <%= button_to 'いいね', post_likes_path(@post) %>
       <% end %>
-      <div class="like-user">
-      いいねしたユーザー
-      </div>
-      <% @post.liked_users.each do |user| %>
-        <li><%= user.name %></li>
-      <% end %>
-    </div>
   </div>
 </div>
 <div class="row">
