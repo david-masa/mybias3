@@ -81,3 +81,5 @@ gem 'rails-i18n', '~> 5.1'
 gem 'devise-i18n'
 # 国旗アイコン導入
 gem 'flag-icons-rails'
+
+gem 'mini_racer'
