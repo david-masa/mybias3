@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :kpop, only: :index
   resources :jpop, only: :index
   resources :thaipop, only: :index
+  resources :chinesepop, only: :index
+  
 end
