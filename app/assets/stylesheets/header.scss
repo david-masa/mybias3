@@ -7,7 +7,7 @@ a{
 
 #logo {
   float: left;
-  background-image: image-url(logo-mybias.png);
+  background-image: image-url("logo-mybias.png");
   background-size: cover;
   height: 60px;
   width: 200px;
