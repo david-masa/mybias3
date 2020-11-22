@@ -1,0 +1,2 @@
+class IndianpopController < ApplicationController
+end
