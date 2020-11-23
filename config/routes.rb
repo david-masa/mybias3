@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :jpop, only: :index
   resources :thaipop, only: :index
   resources :chinesepop, only: :index
+  resources :indianpop, only: :index
   
 end
