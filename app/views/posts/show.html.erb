@@ -9,6 +9,7 @@
       </div>
       <div class="col-md-4">
         <div class="contents-data">
+          <% if user_signed_in? && current_user.id == @post.user_id %>
           <div class="more">
           <span><%= icon('fas', 'info-circle') %></span>
             <ul class="more_list">
@@ -20,6 +21,7 @@
               </li>
             </ul>
           </div>
+          <% end %>
           <div class="contents-title">
           誰ですか？？
           <br><%= @post.title %>
