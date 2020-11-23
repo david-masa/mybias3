@@ -1,0 +1,2 @@
+class RussianpopController < ApplicationController
+end
