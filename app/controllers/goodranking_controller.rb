@@ -1,0 +1,2 @@
+class GoodrankingController < ApplicationController
+end
