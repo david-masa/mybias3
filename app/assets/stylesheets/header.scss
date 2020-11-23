@@ -10,7 +10,7 @@ a{
   background-image: image-url("logo-mybias.png");
   background-size: cover;
   height: 60px;
-  width: 350px;
+  width: 300px;
   @include md {
     font-size: 1.5em;
   }
