@@ -7,17 +7,17 @@
 </div>
 
 
-<div class="main-title"><%= icon('far', 'thumbs-up') %>いいね！ランキング</div>
+<div class="main-title"><%= icon('far', 'thumbs-up') %>いいね！TOP5</div>
 <div class="row">
-  <% @goodrankings.each do |post| %>
-    <div class="col-md-4">
+  <% @goodrankings.each.with_index(1) do |post, i| %>
+    <div class="col-md-12">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8">
           <div class="contents-video">
             <iframe class="contents-video-iframe" src="https://www.youtube.com/embed/<%= post.youtube_url%>" frameborder="0" ></iframe>
           </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-4">
           <div class="contents-data">
             <div class="more">
             <span><%= icon('fas', 'info-circle') %></span>
@@ -28,6 +28,9 @@
               </ul>
             </div>
 
+            <div class="ranking">
+            第 <%= i %> 位！
+            </div>
             <div class="contents-title">
             誰ですか？？
             <br><%= post.title %>
