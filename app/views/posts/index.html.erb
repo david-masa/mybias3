@@ -33,7 +33,15 @@
             </div>
             <div class="contents-v-box">
               <div class="contents-image">
-                <img src="<%= post.user.image %>" alt="face" width="50" height="50">
+                <% if post.user.image? %>
+                <% if post.user.image? %>
+                  <img src="<%= post.user.image %>" alt="face" width="50" height="50">
+                <% else %>
+                  <%= image_tag "default.png", width:50, height:50 %>
+                <% end %>
+                <% else %>
+                  <%= image_tag "default.png", width:50, height:50 %>
+                <% end %>
               </div>
               <div class="contents-name">
                 <%= post.user.name %>
