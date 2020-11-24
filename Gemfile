@@ -89,3 +89,4 @@ gem 'flag-icons-rails'
 
 gem 'mini_racer'
 gem 'kaminari'
+gem 'rspec-rails'
