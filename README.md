@@ -1,18 +1,18 @@
-##### アプリ概要　MyBias!!とは
-#### あなたの推しを紹介するアプリです。
+# アプリ概要　MyBias!!とは
+## あなたの推しを紹介するアプリです。
 ![トップ画像](https://user-images.githubusercontent.com/60571920/100077533-cf659080-2e85-11eb-874a-12fe855ac30d.png)
 
 ### URL
-## http://mybias.tokyo/
+#### http://mybias.tokyo/
 
 ### 使用技術
-## 言語・フレームワーク・ライブラリ
+#### 言語・フレームワーク・ライブラリ
 - Ruby on Rails
 - HTML, CSS, Bootstrap
 - Java Script
 - jQuery
 
-## 環境
+#### 環境
 - インフラ
   - AWS EC2 Route53
   - Capistranoによる自動デプロイ
@@ -20,7 +20,7 @@
   - Unicorn
   - Nginx
 
-## ツール
+#### ツール
 GitHub （チーム開発を想定し、各タスクごとにブランチとプルリクエストを作成）
 
 ### 機能
