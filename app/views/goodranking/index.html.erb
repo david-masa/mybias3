@@ -9,7 +9,7 @@
 
 <div class="main-title"><%= icon('far', 'thumbs-up') %>いいね！TOP5</div>
 <div class="row">
-  <% @goodrankings.each.with_index(1) do |post, i| %>
+  <% @goodrankings.first(5).each.with_index(1) do |post, i| %>
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-8">
