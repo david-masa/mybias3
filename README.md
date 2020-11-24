@@ -57,9 +57,9 @@ GitHub （チーム開発を想定し、各タスクごとにブランチとプ�
 |youtube_url|string|null: false|
 
 ### Association
-belongs_to :user
-has_many :comments, dependent: :destroy
-has_many :likes
+belongs_to :user<br>
+has_many :comments, dependent: :destroy<br>
+has_many :likes<br>
 has_many :liked_users, through: :likes, source: :user
 
 ## Userテーブル
@@ -74,9 +74,9 @@ has_many :liked_users, through: :likes, source: :user
 |remember_created_at|datetime||
 
 ### Association
-has_many :posts, dependent: :destroy
-has_many :comments, dependent: :destroy
-has_many :likes, dependent: :destroy
+has_many :posts, dependent: :destroy<br>
+has_many :comments, dependent: :destroy<br>
+has_many :likes, dependent: :destroy<br>
 has_many :liked_posts, through: :likes, source: :post
 
 ## Commentsテーブル
@@ -87,7 +87,7 @@ has_many :liked_posts, through: :likes, source: :post
 |text|text||
 
 ### Association
-belongs_to :post
+belongs_to :post<br>
 belongs_to :user
 
 ## Likesテーブル
@@ -97,6 +97,6 @@ belongs_to :user
 |post_id|reference||
 
 ### Association
-belongs_to :post
-belongs_to :user
+belongs_to :post<br>
+belongs_to :user<br>
 validates_uniqueness_of :post_id, scope: :user_id
