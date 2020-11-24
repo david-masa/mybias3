@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @posts = @posts.order("created_at DESC")
+    @posts = @posts.page(params[:page]).per(12)
+
   end
 
   def new

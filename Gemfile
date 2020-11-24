@@ -73,7 +73,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # fontawesome導入
 gem 'font-awesome-sass'
 # bootstrap導入
-gem 'bootstrap', '~> 5.0.0.alpha3'
+gem 'bootstrap'
 gem 'jquery-rails'
 gem 'devise-bootstrap-views', '~> 1.0'
 # devise（ログイン機能）導入
@@ -88,3 +88,4 @@ gem 'devise-i18n'
 gem 'flag-icons-rails'
 
 gem 'mini_racer'
+gem 'kaminari'
