@@ -1,8 +1,8 @@
 FactoryBot.define do
 
   factory :comment do
-    user_id             {3}
-    post_id             {6}
+    association :user
+    association :post
     text                {"かっこいい！！"}
   end
 
