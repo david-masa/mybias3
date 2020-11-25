@@ -1,7 +1,7 @@
 FactoryBot.define do
 
   factory :post do
-    user_id             {3}
+    association :user
     title               {"推しの名前"}
     reason              {"理由"}
     category_id         {"KPOP"}

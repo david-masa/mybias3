@@ -2,6 +2,11 @@ require 'rails_helper'
 describe Post do
   describe '#create' do
 
+    it "title,category_id,reason,youtube_urlが存在すれば登録できること" do
+      post = build(:post)
+      expect(post).to be_valid
+    end
+
     it "titleがない場合は登録できないこと" do
       post = build(:post, title: nil)
       post.valid?
