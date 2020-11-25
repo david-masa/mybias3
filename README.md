@@ -44,8 +44,7 @@ GitHub （チーム開発を想定し、各タスクごとにブランチとプ�
 ![いいねランキング機能](https://user-images.githubusercontent.com/60571920/100077556-d7bdcb80-2e85-11eb-84c5-2b397e2514e0.png)
 
 ### レスポンシブデザイン
-![レスポンシブデザイン](https://user-images.githubusercontent.com/60571920/100079337-e0170600-2e87-11eb-90ec-3a3933a17d35.png)
-
+![レスポンシブデザイン](https://user-images.githubusercontent.com/60571920/100160777-9106ba80-2ef3-11eb-88bb-d2bbd98ed485.gif)
 
 ## Postsテーブル
 |Column|Type|Options|
