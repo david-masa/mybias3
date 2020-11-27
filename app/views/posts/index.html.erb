@@ -34,13 +34,9 @@
             <div class="contents-v-box">
               <div class="contents-image">
                 <% if post.user.image? %>
-                <% if post.user.image? %>
-                  <img src="<%= post.user.image %>" alt="face" width="50" height="50">
+                  <img src="<%= post.user.image %>" alt="face" width="30" height="30">
                 <% else %>
-                  <%= image_tag "default.png", width:50, height:50 %>
-                <% end %>
-                <% else %>
-                  <%= image_tag "default.png", width:50, height:50 %>
+                  <%= image_tag "default.png", width:30, height:30 %>
                 <% end %>
               </div>
               <div class="contents-name">
