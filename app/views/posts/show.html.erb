@@ -70,7 +70,7 @@
       <% @comments.each do |comment| %>
         <p>
           <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
-          <%= comment.text %>
+          <%= simple_format comment.text %>
         </p>
       <% end %>
     <% end %>
