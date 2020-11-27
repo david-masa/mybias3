@@ -17,12 +17,12 @@
             <li class="nav-item dropdown">
               <%= link_to icon('fas', 'th') + " カテゴリー", '#', class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" } %>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <%= link_to "K-POP", kpop_index_path, class: 'dropdown-item' %>
-                <%= link_to "J-POP", jpop_index_path, class: 'dropdown-item' %>
-                <%= link_to "Thai-POP", thaipop_index_path, class: 'dropdown-item' %>
-                <%= link_to "Chinese-POP", chinesepop_index_path, class: 'dropdown-item' %>
-                <%= link_to "Russian-POP", russianpop_index_path, class: 'dropdown-item' %>
-                <%= link_to "Indian-POP", indianpop_index_path, class: 'dropdown-item' %>
+                <a href="/kpop" class="dropdown-item"><span class="flag-icon flag-icon-kr"></span>K-POP</a>
+                <a href="/jpop" class="dropdown-item"><span class="flag-icon flag-icon-jp"></span>J-POP</a>
+                <a href="/thaipop" class="dropdown-item"><span class="flag-icon flag-icon-th"></span>Thai-POP</a>
+                <a href="/chinesepop" class="dropdown-item"><span class="flag-icon flag-icon-cn flag-icon-squared"></span><span class="flag-icon flag-icon-tw flag-icon-squared"></span>Chinese-POP</a>
+                <a href="/russianpop" class="dropdown-item"><span class="flag-icon flag-icon-ru"></span>Russian-POP</a>
+                <a href="/indianpop" class="dropdown-item"><span class="flag-icon flag-icon-in"></span>Indian-POP</a>
               </div>
             </li>
             <li class="nav-item">
