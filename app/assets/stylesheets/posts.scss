@@ -68,8 +68,10 @@
     
       .col-md-12{
         .contents-data{
-          border: solid 1px blanchedalmond;
           position: relative;
+          background-color: #ebeef0;
+          border-radius: 5%;
+          margin-top: 5px;
           .more {
             position: absolute;
             cursor: pointer;
@@ -244,7 +246,9 @@
     
       .col-md-4{
         .contents-data{
-          border: solid 1px blanchedalmond;
+          background-color: #ebeef0;
+          border-radius: 5%;
+          margin-top: 5px;
           position: relative;
           .more {
             position: absolute;
@@ -379,7 +383,9 @@
     
       .col-md-4{
         .contents-data{
-          border: solid 1px blanchedalmond;
+          background-color: #ebeef0;
+          border-radius: 5%;
+          margin-top: 5px;
           position: relative;
           .more {
             position: absolute;
