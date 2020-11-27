@@ -39,7 +39,7 @@
           </div>
           <div class="contents-reason">
             推した理由は？？<br>
-            <%= @post.reason %>
+            <%= simple_format @post.reason %>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
       <% @comments.each do |comment| %>
         <p>
           <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
-          <%= comment.text %>
+          <%= simple_format comment.text %>
         </p>
       <% end %>
     <% end %>
