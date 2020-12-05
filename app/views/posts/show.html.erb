@@ -47,19 +47,8 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-12">
-    <div class="like-count">
-      <% if current_user.already_liked?(@post) %>
-        <%= link_to post_like_path(@post), method: :delete do %>
-          <i class="fas fa-heart"></i>
-        <% end %>
-      <% else %>
-        <%= link_to post_likes_path(@post), method: :post do %>
-          <i class="far fa-heart">
-          </i>
-        <% end %>
-      <% end %>
-      いいね件数: <%= @post.likes.count %>
+  <div class="col-md-12" id="show_like_<%= @post.id %>">
+    <%= render 'likes/like', post: @post%>
   </div>
 </div>
 <div class="row">
