@@ -21,7 +21,7 @@ class User < ApplicationRecord
     end
   end
 
-    def already_liked?(post)
-      self.likes.exists?(post_id: post.id)
-    end
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
+  end
 end
