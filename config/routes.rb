@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   root "posts#index"
   resources :posts do
+    get :search, on: :collection
     resources :likes, only: [:create, :destroy]
     resources :comments, only: :create
     get 'likes/destroy'
