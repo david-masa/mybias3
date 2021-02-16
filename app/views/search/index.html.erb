@@ -6,5 +6,15 @@
 </div>
 <div class="main-title">
   <%= icon("fas", "search", class: "seach-icon") %>
-  MusicVideoを検索する
+  どの推しを探す？
 </div>
+<%= form_tag(:method => 'get') do %>
+  <div class="field row">
+  探したい推しの名前、もしくはグループ名を入力しよう！
+    <%= text_field_tag :search %>
+  </div>
+  <div class="col-md-2 post-btn">
+    <%= submit_tag 'Search', :name => nil %>
+  </div>
+
+<% end %>
