@@ -9,12 +9,12 @@
   どの推しを探す？（上位3件表示）
 </div>
 <%= form_tag(search_posts_path, :method => 'get') do %>
-  <div class="field row">
+  <div class="field row search-title">
   探したい推しの名前を入力しよう！
     <%= text_field_tag :search %>
   </div>
   <div class="col-md-2 post-btn">
-    <%= submit_tag '検索！', :name => nil %>
+    <%= submit_tag '検索！', :name => nil, class: "btn btn-primary btn-block" %>
   </div>
 
 <% end %>
