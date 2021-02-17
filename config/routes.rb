@@ -19,6 +19,4 @@ Rails.application.routes.draw do
   resources :indianpop, only: :index
   resources :russianpop, only: :index
   resources :goodranking, only: :index
-  resources :search, only: :index
-  
 end
