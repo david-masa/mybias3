@@ -26,6 +26,9 @@
 #goodranking-top{
   background-image: image-url("goodranking-top.jpg");
 }
+#search-top{
+  background-image: image-url("search.jpg");
+}
 
 //index
 .row{
@@ -158,7 +161,10 @@
 
 
 
-
+//検索
+.search-title{
+  height: 5rem;
+}
 
 
 .post-title {

@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  get 'search/new'
   devise_for :users
   devise_scope :user do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
   root "posts#index"
   resources :posts do
+    get :search, on: :collection
     resources :likes, only: [:create, :destroy]
     resources :comments, only: :create
     get 'likes/destroy'
@@ -17,5 +19,6 @@ Rails.application.routes.draw do
   resources :indianpop, only: :index
   resources :russianpop, only: :index
   resources :goodranking, only: :index
+  resources :search, only: :index
   
 end
