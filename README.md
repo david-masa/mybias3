@@ -1,6 +1,6 @@
 # アプリ概要　MyBias!!とは
 ## あなたの推しを紹介するアプリです。
-![トップ画像](https://user-images.githubusercontent.com/60571920/100077533-cf659080-2e85-11eb-874a-12fe855ac30d.png)
+![トップ画像](https://user-images.githubusercontent.com/60571920/108160015-927b0400-712b-11eb-88ad-5944048622f4.png)
 
 ### URL
 #### http://mybias.tokyo/
